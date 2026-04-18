@@ -1,43 +1,57 @@
 # E-Commerce Sales Analysis
+> An end-to-end data analysis project uncovering revenue drivers and actionable business insights from 240 real transactions.
 
-## Overview
-Analysis of 240 transactions across product categories, regions, and time periods to identify revenue drivers and business opportunities.
-
-**Tools:** Python, Pandas, Matplotlib, Seaborn  
-**Dataset:** Online Sales Dataset (Kaggle)
+![Python](https://img.shields.io/badge/Python-3.13-blue) ![Pandas](https://img.shields.io/badge/Pandas-2.0-green) ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.8-orange) ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 ---
 
-## Key Findings
+## The Business Problem
+
+An e-commerce company has 12 months of sales data across multiple product categories, regions, and payment methods — but no clear picture of **what drives revenue**, **when to stock up**, or **where to focus marketing spend**.
+
+This analysis answers 4 key business questions:
+1. Which product categories generate the most revenue?
+2. When is the peak sales period — and how should the business prepare?
+3. Which regions offer the highest ROI for marketing investment?
+4. What payment methods do customers prefer?
+
+---
+
+## Key Results
 
 | Metric | Value |
 |--------|-------|
-| Total Revenue | $80,568 |
-| Average Order Value | $335.70 |
-| Best Category | Electronics |
-| Peak Month | January |
-| Top Region | North America |
+| Total Revenue | **$80,568** |
+| Average Order Value | **$335.70** |
+| Total Transactions | **240** |
+| Best Category | **Electronics** |
+| Peak Month | **January** |
+| Top Region | **North America** |
+| Top Payment | **Credit Card** |
 
 ---
 
-## Business Insights
+## Insights & Recommendations
 
-**1. Electronics dominates revenue**  
-Electronics is the highest-grossing category. Prioritizing stock and promotions in this segment can directly impact overall revenue.
+### 1. Electronics dominates — but it's seasonal
+Electronics is the highest-grossing category, with revenue peaking in **January**. This suggests post-holiday demand or New Year purchasing behavior.
 
-**2. January is the peak month**  
-Revenue peaks in January — likely driven by post-holiday sales or New Year demand. Inventory and marketing budgets should be increased before this period.
+**Recommendation:** Scale Electronics inventory and run targeted campaigns **before January** to maximize peak-season revenue.
 
-**3. North America leads all regions**  
-North America generates the highest share of revenue. Targeted campaigns in this region offer the highest ROI.
+### 2. North America is the highest-ROI market
+North America generates the largest share of revenue across all regions.
 
----
+**Recommendation:** Allocate the majority of the marketing budget to North America. Secondary regions should be monitored for growth potential.
 
-## Recommendations
+### 3. Credit Card is the dominant payment method
+Customers overwhelmingly prefer Credit Card payments over other methods.
 
-1. **Increase Electronics inventory before January** to capitalize on peak demand
-2. **Double down on North America marketing** — highest revenue potential
-3. **Run promotions in low-performing months** to smooth out revenue seasonality
+**Recommendation:** Ensure a seamless Credit Card checkout experience. Consider offering Credit Card-exclusive promotions to boost conversion rates.
+
+### 4. Revenue seasonality creates risk
+Some months significantly underperform compared to January.
+
+**Recommendation:** Introduce time-limited promotions and bundle deals during low-performing months to smooth revenue seasonality.
 
 ---
 
@@ -49,6 +63,27 @@ North America generates the highest share of revenue. Targeted campaigns in this
 ### Top 10 Products & Revenue by Region
 ![Products & Regions](outputs/products_regions.png)
 
+### Correlation Between Key Metrics
+![Correlation Heatmap](outputs/correlation_heatmap.png)
+
+### Payment Method Analysis
+![Payment Analysis](outputs/payment_analysis.png)
+
+### Full KPI Dashboard
+![Dashboard](outputs/dashboard.png)
+
+---
+
+## Tech Stack
+
+| Tool | Purpose |
+|------|---------|
+| Python 3.13 | Core language |
+| Pandas | Data cleaning & analysis |
+| Matplotlib | Data visualization |
+| Seaborn | Statistical charts |
+| Jupyter Notebook | Interactive development |
+
 ---
 
 ## Project Structure
@@ -56,12 +91,15 @@ North America generates the highest share of revenue. Targeted campaigns in this
 ```
 ecommerce-analysis/
 ├── data/
-│   └── sales_data.csv
+│   └── Online Sales Data.csv
 ├── notebooks/
 │   └── analysis.ipynb
 ├── outputs/
 │   ├── revenue_analysis.png
-│   └── products_regions.png
+│   ├── products_regions.png
+│   ├── correlation_heatmap.png
+│   ├── payment_analysis.png
+│   └── dashboard.png
 └── README.md
 ```
 
@@ -70,8 +108,19 @@ ecommerce-analysis/
 ## How to Run
 
 ```bash
+# Install dependencies
 pip install pandas matplotlib seaborn jupyter
+
+# Launch notebook
 jupyter notebook
 ```
 
 Open `notebooks/analysis.ipynb` and run all cells.
+
+---
+
+## About
+
+This project was built as part of a data analysis portfolio to demonstrate end-to-end skills: data cleaning, exploratory analysis, visualization, and business storytelling.
+
+**Open to freelance data analysis projects** — feel free to reach out!
